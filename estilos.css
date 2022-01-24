@@ -1,0 +1,39 @@
+html{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1vw;
+}
+
+h1{
+    text-align: center;
+}
+.contenedor{
+    text-align: center;
+    padding: 20px 30px 20px 30px;
+    width: 50%;
+    height: auto;
+    margin: auto auto;
+    background-color: rgb(199, 199, 199);
+}
+
+.panel{
+    text-align: center;
+    padding: 20px 20px 20px 20px;
+    width: 50%;
+    height: auto;
+    margin: 0px auto;
+    background-color: rgba(0,0,0,.3);
+}
+
+.check{
+    display: none;
+}
+
+.check:checked + label{
+    background-color: rgba(208, 255, 0, 0.452);;    
+}
+
+
+
+
+
+
