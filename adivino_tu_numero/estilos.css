@@ -1,27 +1,43 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 html{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1vw;
+    font-size: 16px;
 }
+
 
 h1{
+    margin: 20px 0px;
     text-align: center;
-}
-.contenedor{
-    text-align: center;
-    padding: 20px 30px 20px 30px;
-    width: 50%;
-    height: auto;
-    margin: auto auto;
-    background-color: rgb(199, 199, 199);
+    color: rgba(16, 163, 40, 0.699);
 }
 
-.panel{
+h2{
+    margin: 20px 0px;
+}
+
+p{
+    margin: 10px;
+}
+
+div.contenedor{
+    text-align: center;
+    padding: 20px 40px 20px 40px;
+    width: 90%;
+    margin: 0 auto;
+    background-color: rgba(8, 121, 173, 0.541);
+}
+
+div.panel{
     text-align: center;
     padding: 20px 20px 20px 20px;
     width: 50%;
-    height: auto;
-    margin: 0px auto;
-    background-color: rgba(0,0,0,.3);
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.384);
 }
 
 label:hover{
@@ -34,6 +50,18 @@ label:hover{
 
 .check:checked + label{
     background-color: rgba(208, 255, 0, 0.452);;    
+}
+
+input[type=submit]{
+    cursor: pointer;
+    width: 90%;
+    height: 3rem;
+    background-color: rgb(255, 255, 255);
+}
+
+input[type=submit]:hover{
+    color: white;
+    background-color: rgba(16, 163, 40, 0.699);
 }
 
 

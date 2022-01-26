@@ -1,0 +1,13 @@
+@media screen and (max-width: 800px){
+    div.contenedor{
+        width: 100%;
+        margin: 0px;
+        padding: 5px;
+    }
+
+    div.panel{
+        width: 100%;
+        margin-top: 10px;
+        padding: 10px;
+    }
+}

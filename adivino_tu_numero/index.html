@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="medias.css">
     <title>Te adivino el número que pienses</title>
 </head>
 <body>
@@ -14,10 +15,10 @@
         <p>Cada vez que la aplicación te especifique un número, deberás de indicar
             si el número buscado <b>es mayor</b> si el número buscado <b>es menor</b> o si la aplicación <b>ha acertado</b> el número. También podrás reiniciar el juego cuando quieras.</p>
         <div class="panel">
-            <p><b>Selecciona un intervalo y haz clic en jugar</b></p>
+            <p><b>Selecciona un intervalo y haz clic en jugar el juego</b></p>
             <form action="jugando.php" method="post">
                 <p><input type="radio" name="opcion" id="opcion1" value="1" class="check" checked><label for="opcion1" class="diez">1-1.024 | 10 intentos </label></p><p><input type="radio" name="opcion" id="opcion2" value="2" class="check" /><label for="opcion2">1-65.536 | 16 intentos</label></p><p><input type="radio" name="opcion" id="opcion3" value="3" class="check"/><label for="opcion3">1-1.048.576 | 20 intentos</label></p>
-                <input type="submit" name="boton" value="Jugar el juego"/>
+                <input type="submit" name="boton" value="JUGAR EL JUEGO"/>
                 <p><input type="hidden" name="intentos" value="0"></p>
                 <p><input type="hidden" name="inferior" value="1"></p>
             </form>
