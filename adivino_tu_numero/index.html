@@ -16,13 +16,11 @@
             si el número buscado <b>es mayor</b>, si el número buscado <b>es menor</b> o si la aplicación <b>ha acertado</b> el número. También podrás reiniciar el juego cuando quieras.</p>
         <div class="panel">
             <p><b>Selecciona un intervalo y haz clic en jugar el juego</b></p>
-            <form action="jugando.php" method="post">
+            <form action="jugar.php" method="post">
                 <p><input type="radio" name="opcion" id="opcion1" value="1" class="check" checked><label for="opcion1">1-1.024 | 10 intentos </label></p>
                 <p><input type="radio" name="opcion" id="opcion2" value="2" class="check" /><label for="opcion2">1-65.536 | 16 intentos</label></p>
                 <p><input type="radio" name="opcion" id="opcion3" value="3" class="check"/><label for="opcion3">1-1.048.576 | 20 intentos</label></p>
                 <button type="submit" name="submit" value="jugar">JUGAR EL JUEGO</button>
-                <p><input type="hidden" name="intentos" value="0"></p>
-                <p><input type="hidden" name="inferior" value="1"></p>
             </form>
         </div>
     </div>    
