@@ -9,12 +9,14 @@
     <title>Adivino el número que pienses</title>
 </head>
 <body>
-<h1>FINAL DEL JUEGO <?php echo $resultado ?> </h1>
+<h1>FINAL DEL JUEGO</h1>
     <div class="contenedor">
-        <h3>Mensaje con h3</h3>
-        <P>Texto de párrafo</p>
+        <h3><?PHP echo $mensaje[0] ?></h3>
+        <P><?PHP echo $mensaje[1] ?></p>
         <div class="panel">
-        <h2><b>ESto es un h2</b></h2>
+            <form action="." method="post">
+                <button type="submit" value="reiniciar" name="submit">VOLVER A JUGAR</button>
+            </form>
         </div>
     </div>    
 </body>

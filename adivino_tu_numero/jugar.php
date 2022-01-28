@@ -26,12 +26,12 @@ if(isset($_POST['submit'])){
             fin_juego(true);
 
         break;
-        default: header('Location: index.html'); 
+        default: header('Location: index.html'); exit;
 
     }
 
 }else{
-    header('Location: index.html'); 
+    header('Location: index.html'); exit;
 }
 
 function siguiente_jugada($numeroInferior,$numeroSuperior){
@@ -92,11 +92,11 @@ function generaNumero($inferior,$superior){
 function fin_juego($resultado){
 
     if($resultado){
-
+        $mensaje=["¡¡He acertado el número que has pensado sin agotar los intentos!!","Siempre acierto, ¿Quiéres probar otra vez?"];
         require_once("final.php");
 
     }else{
-        
+        $mensaje=["Ohhhhh... No he acertado el número que has pensado","¿Seguro que has sido sincero?"];
         require_once("final.php");
     }
     
