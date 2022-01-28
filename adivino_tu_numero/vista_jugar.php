@@ -9,10 +9,10 @@
     <title>Adivino el número que pienses</title>
 </head>
 <body>
-<h1>El número que has pensado es el <?php echo ($numeroGenerado); ?></h1>
+<h1>¿EL NÚMERO QUE HAS PENSADO ES EL <span class="texto_rosa"><?php echo ($numeroGenerado); ?></span> ?</h1>
     <div class="contenedor">
-        <P>Este es intento <?php echo ("3") ?> de adivinar tu número.</P>
-        <P>Me quedan <?php echo ("3") ?> intentos para adivinar el número que has pensado.</p>
+        <h3>Este es intento <?php echo $intentos ?> de adivinar tu número.</h3>
+        <P>Me quedan <?php echo ($quedan_intentos) ?> intentos para adivinar el número que has pensado.</p>
         <div class="panel">
         <h2><b>Indica como es el número que has pensado</b></h2>
             <form action="jugar.php" method="post">
@@ -22,6 +22,8 @@
                 <input type="hidden" name="numeroGenerado" value='<?php echo ($numeroGenerado) ?>' >
                 <input type="hidden" name="numeroInferior" value='<?php echo ($numeroInferior) ?>' >
                 <input type="hidden" name="numeroSuperior" value='<?php echo ($numeroSuperior) ?>' >
+                <input type="hidden" name="intentos" value='<?php echo ($intentos) ?>' >
+                <input type="hidden" name="limite" value='<?php echo ($limite) ?>' >
             </form>
         </div>
     </div>    
