@@ -7,7 +7,7 @@ if(isset($_POST['calcula'])){
 
     $dni=filter_input(INPUT_POST,'dni');
 
-    if(preg_match('/[0-9]+/',$dni)){
+    if(preg_match('/[0-9]{8}/',$dni)){
         $letra_dni="La letra del DNI introducido es la <b>".calculaletra($dni)."</b>";
     }else{
         $error="Por favor, debes introducir sólo valores numéricos";
