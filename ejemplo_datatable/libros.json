@@ -1,0 +1,21 @@
+{
+    "data":[
+
+        {"titulo":"La máquina del tiempo","autor":"Herbert George Wells","precio":"20€","categoria":"Ciencia Ficción"},
+        {"titulo":"En las montañas de la locura","autor":"H.P. Lovecraft","precio":"10€","categoria":"Ciencia Ficción"},
+        {"titulo":"Un capitán de quince años","autor":"Julio Verne","precio":"15€","categoria":"Aventura"},
+        {"titulo":"Orgullo y prejuicio","autor":"Jane Austen","precio":"12€","categoria":"Novela Romántica"},
+        {"titulo":"Soy leyenda","autor":"Richard Matheson","precio":"10€","categoria":"Ciencia Ficción"},
+        {"titulo":"La isla del tesoro","autor":"Robert Louis Stevenson","precio":"18€","categoria":"Aventura"},
+        {"titulo":"El ruiseñor","autor":"Kristin Hannah","precio":"10€","categoria":"Novela Romántica"},
+        {"titulo":"El faro del fin del mundo","autor":"Julio Verne","precio":"17€","categoria":"Aventura"},
+        {"titulo":"Fahrenheit 451","autor":"Ray Bradbury","precio":"12€","categoria":"Ciencia Ficción"},
+        {"titulo":"La flecha negra","autor":"Robert Louis Stevenson","precio":"10€","categoria":"Aventura"},
+        {"titulo":"Edenbrooke","autor":"Julianne Donaldson","precio":"7€","categoria":"Novela Romántica"},
+        {"titulo":"Las estrellas, mi destino","autor":"Alfred Bester","precio":"12€","categoria":"Ciencia Ficción"},
+        {"titulo":"Las aventuras de Tom Sawyer","autor":"Mark Twain","precio":"16€","categoria":"Aventura"},
+        {"titulo":"El jinete de bronce","autor":"Paullina Simons","precio":"8€","categoria":"Novela Romántica"},
+        {"titulo":"Dune","autor":"Frank Herbert","precio":"10€","categoria":"Ciencia Ficción"}
+
+    ]
+}
