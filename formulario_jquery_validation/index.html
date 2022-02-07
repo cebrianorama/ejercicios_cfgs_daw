@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="jquery-3.4.1.js" type="text/javascript"></script>
+        <script src="jquery.validate.min.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="estilos.css">
+        <title>Ejemplo de validación del formulario usando el plugin validate de jQuery</title>
+       <script>
+              $(document).ready(function(){
+                     $("#formulario").validate({
+                     rules: {
+                            nombre: {
+                                   required: true,
+                                   minlength: 4
+                            },
+                            primerapellido: {
+                                   required: true,
+                                   minlength: 4
+                            },
+                            segundoapellido: {
+                                   required: true,
+                                   minlength: 4
+                            },
+                            edad: {
+                                   required: true,
+                                   validaedad: true
+                            },
+                            comentarios: {
+                                   required: true,
+                                   minlength: 10
+                            },
+                            telefono: {
+                                   required: true,
+                                   validatelefono: true
+                            },
+                            nif: {
+                                   required: true,
+                                   validanif: true
+                            },
+                            email: {
+                                   required: true
+                            },
+                            url: {
+                                   required: true
+                            }
+                     },
+                     messages: {
+                            nombre: {
+                                   required: "Hay que rellenar el campo obligatoriamente",
+                                   minlength: "Por favor, el mínimo son 4 caracteres"
+                            },
+                            primerapellido: {
+                                   required: "Hay que rellenar el campo obligatoriamente",  
+                                   minlength: "Por favor, el mínimo son 4 caracteres"
+                            },
+                            segundoapellido: {
+                                   required: "Hay que rellenar el campo obligatoriamente",     
+                                   minlength: "Por favor, el mínimo son 4 caracteres"
+
+                            },
+                            edad: {
+                                   required: "Hay que rellenar el campo obligatoriamente",
+                                   validaedad: "La edad debe ser un dígito entre 18 y 100"
+                            },
+                            telefono: {
+                                   required: "Hay que rellenar el campo obligatoriamente",
+                                   validatelefono: "El prefijo no es correcto, debe ser 976,974 o 978"
+                            },
+                            nif: {
+                                   required: "Hay que rellenar el campo obligatoriamente",
+                                   validanif: "El NIF debe estar en formato dd.ddd.ddd-l"
+                            },
+                            comentarios: {
+                                   required: "Hay que rellenar el campo obligatoriamente",
+                                   minlength: "Por favor, el mínimo son 10 caracteres"
+                            },
+                            email: {
+                                   required: "Hay que rellenar el campo obligatoriamente"
+                            },
+                            url: {
+                                   required: "Hay que rellenar el campo obligatoriamente"
+                            }
+                     }
+                     });            
+              }); 
+
+              //Regla personalizada para la edad
+              jQuery.validator.addMethod("validaedad",
+                     function(value, element) {
+                            return ((value>=18)&&(value<=100));
+                     }
+              );
+
+              //Regla personalizada para el teléfono
+              jQuery.validator.addMethod("validatelefono",
+                     function(value, element) {
+                            return (/^(976|974|978){1}[0-9]*$/.test(value));
+                     }
+              );
+
+              //Regla personalizada para el nif
+              jQuery.validator.addMethod("validanif",
+                     function(value, element) {
+                            return (/^[0-9]{1,2}[\.][0-9]{3}[\.][0-9]{3}[\-][a-z]$/.test(value));
+                     }
+              );
+
+       </script>
+
+       </head>
+       <body>
+              <div class="contenedor">
+              <h1>Ejemplo de validación de formulario con plugin jQuery Validate</h1>
+                     <form id="formulario" name="formulario">
+                            <label>Nombre </label><input type="text" id="nombre" name="nombre"><br /><br />
+                            <label>Primer apellido </label><input type="text" id="primerapellido" name="primerapellido"><br /><br />
+                            <label>Segundo apellido </label><input type="text" id="segundoapellido" name="segundoapellido"><br /><br />
+                            <label>Edad </label><input type="text" id="edad" name="edad"><br /><br />
+                            <label>Email </label><input type="text" id="email" name="email"><br /><br />
+                            <label>URL </label><input type="text" id="url" name="url"><br /><br />
+                            <label>Teléfono </label><input type="text" id="telefono" name="telefono"><br /><br />
+                            <label>Nif </label><input type="text" id="nif" name="nif"><br /><br />
+                            <label>Comentarios </label><br /><textarea name="comentarios" id="comentarios" cols="50"></textarea><br /><br />
+                            <input type="submit" id="boton" value="Enviar formulario">
+                     </form>
+              </div>
+       </body>
+</html>
