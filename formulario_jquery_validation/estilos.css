@@ -5,10 +5,13 @@ html{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+h1{
+    text-align: center;
+}
+
 label.error{
     color:red;
     font-size:12px;
-    padding-left: 30px
 }
 
 label{
@@ -16,10 +19,17 @@ label{
 }
 
 div.contenedor{
-    width: 80%;
+    width: 60%;
     margin: 50px auto;
 }
 
 input{
-    width: 50%;
+    width: 100%;
+}
+
+button{
+    height: 30px;
+    margin-top: 20px;
+    font-weight: bold;
+    cursor: pointer;
 }

@@ -27,10 +27,6 @@
                                    required: true,
                                    validaedad: true
                             },
-                            comentarios: {
-                                   required: true,
-                                   minlength: 10
-                            },
                             telefono: {
                                    required: true,
                                    validatelefono: true
@@ -40,10 +36,12 @@
                                    validanif: true
                             },
                             email: {
-                                   required: true
+                                   required: true,
+                                   validaemail: true
                             },
                             url: {
-                                   required: true
+                                   required: true,
+                                   validaurl: true
                             }
                      },
                      messages: {
@@ -66,21 +64,19 @@
                             },
                             telefono: {
                                    required: "Hay que rellenar el campo obligatoriamente",
-                                   validatelefono: "El prefijo no es correcto, debe ser 976,974 o 978"
+                                   validatelefono: "El prefijo no es correcto, debe ser 976, 974 o 978"
                             },
                             nif: {
                                    required: "Hay que rellenar el campo obligatoriamente",
-                                   validanif: "El NIF debe estar en formato dd.ddd.ddd-l"
-                            },
-                            comentarios: {
-                                   required: "Hay que rellenar el campo obligatoriamente",
-                                   minlength: "Por favor, el mínimo son 10 caracteres"
+                                   validanif: "El NIF debe estar en formato dd.ddd.ddd-letra"
                             },
                             email: {
-                                   required: "Hay que rellenar el campo obligatoriamente"
+                                   required: "Hay que rellenar el campo obligatoriamente",
+                                   validaemail: "El formato debe ser tipo email@email.com"
                             },
                             url: {
-                                   required: "Hay que rellenar el campo obligatoriamente"
+                                   required: "Hay que rellenar el campo obligatoriamente",
+                                   validaurl: "El formato debe ser tipo www.dominio.extensión"
                             }
                      }
                      });            
@@ -107,12 +103,26 @@
                      }
               );
 
+              //Regla personalizada para la url
+              jQuery.validator.addMethod("validaurl",
+                     function(value, element) {
+                            return (/^[w]{3}[\.][a-z]+[\.][a-z]+$/.test(value));
+                     }
+              );           
+
+              //Regla personalizada para el email
+              jQuery.validator.addMethod("validaemail",
+                     function(value, element) {
+                            return (/^[a-z]+[\@][a-z]+[\.][a-z]+$/.test(value));
+                     }
+              );      
+
        </script>
 
        </head>
        <body>
-              <div class="contenedor">
               <h1>Ejemplo de validación de formulario con plugin jQuery Validate</h1>
+              <div class="contenedor">
                      <form id="formulario" name="formulario">
                             <label>Nombre </label><input type="text" id="nombre" name="nombre"><br /><br />
                             <label>Primer apellido </label><input type="text" id="primerapellido" name="primerapellido"><br /><br />
@@ -122,8 +132,7 @@
                             <label>URL </label><input type="text" id="url" name="url"><br /><br />
                             <label>Teléfono </label><input type="text" id="telefono" name="telefono"><br /><br />
                             <label>Nif </label><input type="text" id="nif" name="nif"><br /><br />
-                            <label>Comentarios </label><br /><textarea name="comentarios" id="comentarios" cols="50"></textarea><br /><br />
-                            <input type="submit" id="boton" value="Enviar formulario">
+                            <button type="submit" id="boton">Enviar formulario</button>
                      </form>
               </div>
        </body>
